@@ -19,7 +19,13 @@ class ToggleUL {
   
   initElements(mainClass, subClass, icons, indents, border) {
 
-    if(border)$("ul." + subClass).css("border-left", border[0]+' '+border[1]+' '+border[2]);
+    if (border) $("ul." + subClass).css("border-left", border[0] + ' ' + border[1] + ' ' + border[2]);
+    
+    $("ul." + subClass).css({
+      'display': 'none',
+      'margin-top': '2px',
+      'border-radius': '2px'
+    });
 
     $("ul li").each(function (k, v) {
       
@@ -71,3 +77,4 @@ class ToggleUL {
   }
   
 }
+
